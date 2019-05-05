@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My 45s Collection</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>45 RPM<br>
+            <span>A Collection of Vinyl Singles</span></h1>                
+        </header>
+        <section class="section" id="search">
+            <div class="search-form">
+                <form id="myForm">
+                    <div class="form-control">
+                        <input type="text" id="filterArtistInput" placeholder="Filter by Artist...">
+                    </div>
+                    <p>- or -</p>
+                    <div class="form-control">
+                        <input type="text" id="filterSongInput" placeholder="Filter by Song...">
+                    </div>
+                    <button id="clear" onclick="clearInput()">Clear</button>
+
+                </form>
+            </div>
+        </section>
+        <section class="section content">
+            <main>
+                <div class="inner-content">
+                    <h2>The 45s</h2>
+                    <div id="records" data-filter-reveal="true" data-filter="true">
+                    </div>  
+                    <button id="show-more">Show More</button>
+                </div>
+            </main>
+        </section>
+        <footer>
+            <p>&copy; 2019 Rebecca Eilering | Just Make It Awesome!</p>
+        </footer>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
+</html>

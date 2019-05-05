@@ -1,0 +1,165 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #222831; }
+
+.wrapper {
+  margin: auto; }
+
+button {
+  padding: 20px;
+  display: block;
+  border: 0;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px; }
+  button#show-more {
+    background-color: #FFCD38; }
+    button#show-more:hover {
+      background-color: #ffd352; }
+
+header {
+  background-image: url("../img/record-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #00ADB5;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center; }
+  header h1 {
+    font-size: 8rem;
+    line-height: 48px;
+    color: #fff; }
+    header h1 span {
+      font-size: 2rem; }
+
+section#search {
+  background-color: #222831;
+  padding: 40px;
+  text-align: center; }
+  section#search .search-form {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto; }
+  section#search input[type="text"] {
+    padding: 15px;
+    font-size: 1rem;
+    display: block;
+    border: 0;
+    width: 100%; }
+  section#search button#clear {
+    display: block;
+    padding: 15px;
+    background-color: #FFCD38;
+    margin-top: 20px; }
+    section#search button#clear:hover {
+      background-color: #ffd352; }
+
+section.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  section.content aside {
+    background-color: #393E46;
+    width: 25%;
+    height: auto;
+    padding: 20px;
+    color: #fff;
+    margin-right: 20px; }
+    section.content aside .button-container {
+      margin-top: 20px; }
+  section.content main {
+    background-color: #EEEEEE;
+    height: auto;
+    padding: 20px;
+    width: 100%; }
+    section.content main .inner-content {
+      width: 80%;
+      max-width: 1200px;
+      margin: auto; }
+      section.content main .inner-content #records {
+        list-style: none;
+        padding-left: 0;
+        border: 1px solid #d5d5d5;
+        margin-top: 20px;
+        background-color: white; }
+        section.content main .inner-content #records .artist-song {
+          padding: 20px;
+          font-weight: bold;
+          color: black;
+          position: relative; }
+          section.content main .inner-content #records .artist-song:last-child {
+            border-bottom: none; }
+          section.content main .inner-content #records .artist-song:nth-child(odd) {
+            background: #f1f1f1; }
+          section.content main .inner-content #records .artist-song:nth-child(n+21) {
+            display: none; }
+          section.content main .inner-content #records .artist-song p {
+            font-weight: normal;
+            font-style: italic;
+            color: #61728b;
+            margin-top: 30px; }
+          section.content main .inner-content #records .artist-song .btn-more {
+            width: 45px;
+            padding: 10px;
+            background-color: #00ADB5;
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin-top: 0; }
+          section.content main .inner-content #records .artist-song.close .info-sec {
+            display: none; }
+          section.content main .inner-content #records .artist-song.open .info-sec {
+            display: block; }
+          section.content main .inner-content #records .artist-song.open .btn-more {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+          section.content main .inner-content #records .artist-song .info-sec {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px; }
+
+footer {
+  background-color: #222831;
+  padding: 20px;
+  color: #fff;
+  text-align: center; }
+
+@media (max-width: 680px) {
+  header {
+    height: 200px; }
+    header h1 {
+      font-size: 4rem;
+      line-height: 30px; }
+      header h1 span {
+        font-size: 1.2rem; }
+  section.content main .inner-content,
+  section#search .search-form {
+    width: 100%; } }
+
+@media (max-width: 800px) {
+  section#search input[type="text"] {
+    width: 100%; }
+  section#search button#clear {
+    width: 100%;
+    display: block;
+    margin-top: 20px; } }
