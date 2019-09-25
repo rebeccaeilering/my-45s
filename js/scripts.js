@@ -3,7 +3,6 @@ fetch('records.json')
   return response.json();
 })
 .then(function(data) {
-  console.log(JSON.stringify(data))
   data.records.sort(function(a, b){
       let x = a.artist;
       let y = b.artist;
@@ -88,18 +87,19 @@ function handleClick() {
     hiddenSongs.length = 0;
 }
 
-window.onload = function() {
-    const toggle = document.getElementsByClassName('btn-more');
-    for (i = 0; i < toggle.length; i++) {
-        toggle[i].addEventListener('click', toggleItem, false);
-    }
-    function toggleItem() {
-        const itemClass = this.parentNode.className;
-        for (i = 0; i < song.length; i++) {
-            song[i].className = 'artist-song close';
-        }
+document.body.onload = function() {
+    let toggle = document.getElementsByClassName('btn-more');
+
+    for (let i = 0; i < toggle.length; i++) {
+      console.log(toggle[i]);
+      toggle[i].addEventListener('click', function () {
+        console.log('clicked');
+        let itemClass = this.parentNode.className;
         if (itemClass == 'artist-song close') {
-            this.parentNode.className = 'artist-song open';
-        }
-    }
-}
+          this.parentNode.className = 'artist-song open';
+        } else if (itemClass == 'artist-song open') {
+          this.parentNode.className = 'artist-song close';
+        };
+      });
+    };
+};
